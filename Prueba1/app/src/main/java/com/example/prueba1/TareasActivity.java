@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class TareasActivity extends AppCompatActivity {
+public class TareasActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     // Declaracion de variables
@@ -20,13 +20,17 @@ public class TareasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tareas);
 
         fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(this);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), register_tareas.class);
-                startActivity(intent);
-            }
-        });
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == fab){
+            Intent intent = new Intent(getApplicationContext(), register_tareas.class);
+            startActivity(intent);
+        }
+
     }
 }
