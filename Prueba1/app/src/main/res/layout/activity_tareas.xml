@@ -8,14 +8,25 @@
     tools:context=".TareasActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_marginBottom="25dp"
-        android:text="Actividades diarias"
+        android:text="Actividades"
         android:textSize="30dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </RelativeLayout>
